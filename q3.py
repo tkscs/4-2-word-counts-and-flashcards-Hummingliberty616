@@ -1,8 +1,17 @@
 # Update this dictionary with questions and answers:
+import random
 flashcards = {
-    "question": "answer"
+    "What is 2*2?": "4"
 }
 
+for i in range(10):
+    question = random.choice(flashcards)
+    response = input(question)
+    if flashcards[question] == response:
+        print(True)
+
+    else: 
+        print(False)
 # Get a list of keys (questions) from the dictionary
 #### YOUR CODE HERE
 
