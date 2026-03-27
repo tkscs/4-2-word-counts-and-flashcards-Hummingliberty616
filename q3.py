@@ -3,9 +3,11 @@ import random
 flashcards = {
     "What is 2*2?": "4"
 }
+questions = list(flashcards.keys())
+answers = list(flashcards.values())
 
 for i in range(10):
-    question = random.choice(flashcards)
+    question = random.choice(questions)
     response = input(question)
     if flashcards[question] == response:
         print(True)
