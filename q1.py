@@ -29,13 +29,24 @@ change in their communities and beyond.
 
 # 1. Remove all new lines and punctuation, and convert to all lowercase.
 #### YOUR CODE HERE
-
+new_string = "" 
+for word in text:
+    new_string = new_string + word.lower()
 # 2. Use the `.split()` method to split into a list of words.
 #### YOUR CODE HERE
+qwerty = new_string.split()
 
 # 3. Initialize an empty dictionary to keep track of word counts.
 #### YOUR CODE HERE
+dict = {}
+for i in range(len(qwerty)):
+    if qwerty[i] in dict:
+        dict[qwerty[i]] += 1
+    
+    else:
+        dict[qwerty[i]] = 1
 
+print(dict)
 # 4. loop through the list of words and update the dictionary. If the word is
 # already a key in the dicitonary, increment the count. If not, add the new key
 # with a count of 1.
